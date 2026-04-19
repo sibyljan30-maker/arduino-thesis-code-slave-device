@@ -5,8 +5,8 @@
 #include "configFirebase.h"
 
 // master device
-const int mq135Pin = 32; // Mau ni ang MQ7
-const int mq7Pin = 35; // Mau ni ang MQ135
+const int mq135Pin = 35; // Mau ni ang MQ7
+const int mq7Pin = 32; // Mau ni ang MQ135
 const int SLAVE_ADDR = 0x08; // I2C address of Arduino Nano
 
 float dustDensity = 0;
