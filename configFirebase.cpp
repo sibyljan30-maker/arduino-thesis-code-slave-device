@@ -8,8 +8,8 @@
 #include <addons/TokenHelper.h>
 #include <addons/RTDBHelper.h>
 // Master code final
-#define WIFI_SSID       "EmergencyMonitoring"
-#define WIFI_PASSWORD   "Monitoring1234"
+#define WIFI_SSID       "GlobeAtHome_2F27D_2.4"
+#define WIFI_PASSWORD   "3F4E2F27"
 
 #define API_KEY         "AIzaSyB0uV3eUPE4g39vfG6CZJ3m9OVTT9ivqXU"
 #define DATABASE_URL    "https://savest-94b43-default-rtdb.firebaseio.com"
@@ -96,14 +96,14 @@ void CONFIGFIREBASE::sendFirebaseData(int mq135Val, int mq7Val, int dust, float 
 {
   if (Firebase.ready() && millis() - prevTime >= interval) {
 
-    bool isTempSuccess = Firebase.setInt(fbdo, "/monitoring/vest2/temp", temperature);
-    bool isHumdSuccess = Firebase.setInt(fbdo, "/monitoring/vest2/humd", humidity);
-    bool isDustSuccess = Firebase.setInt(fbdo, "/monitoring/vest2/dust", dust); 
-    bool isMQ135Success = Firebase.setInt(fbdo, "/monitoring/vest2/mq135", mq135Val);
-    bool isMQ7Success = Firebase.setInt(fbdo, "/monitoring/vest2/mq7", mq7Val);
-    bool isPersonFainted = Firebase.setBool(fbdo, "/monitoring/vest2/fallDetected", isPersonFall);
-    bool isWarningSuccess = Firebase.setBool(fbdo, "/monitoring/vest2/WarningStatus", warningStatus);
-    bool isEmergencySuccess = Firebase.setBool(fbdo, "/monitoring/vest2/EmergencyStatus", emergencyStatus);
+    bool isTempSuccess = Firebase.setInt(fbdo, "/monitoring/vest1/temp", temperature);
+    bool isHumdSuccess = Firebase.setInt(fbdo, "/monitoring/vest1/humd", humidity);
+    bool isDustSuccess = Firebase.setInt(fbdo, "/monitoring/vest1/dust", dust); 
+    bool isMQ135Success = Firebase.setInt(fbdo, "/monitoring/vest1/mq135", mq135Val);
+    bool isMQ7Success = Firebase.setInt(fbdo, "/monitoring/vest1/mq7", mq7Val);
+    bool isPersonFainted = Firebase.setBool(fbdo, "/monitoring/vest1/fallDetected", isPersonFall);
+    bool isWarningSuccess = Firebase.setBool(fbdo, "/monitoring/vest1/WarningStatus", warningStatus);
+    bool isEmergencySuccess = Firebase.setBool(fbdo, "/monitoring/vest1/EmergencyStatus", emergencyStatus);
 
 
     if (!isTempSuccess || !isDustSuccess || !isMQ135Success || !isMQ7Success || !isPersonFainted || !isWarningSuccess || !isEmergencySuccess || !isHumdSuccess)

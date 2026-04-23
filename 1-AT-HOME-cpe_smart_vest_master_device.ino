@@ -88,26 +88,26 @@ void loop() {
       parseSlaveData(received);
     }
 
-    if (mq135Val < 305)
-      mq135Val = random (10, 20);
-    else if (mq135Val < 515)
-      mq135Val = random (30, 50);
-    else
-      mq135Val = random (75, 100);
+    //if (mq135Val < 305)
+      //mq135Val = random (10, 20);
+    //else if (mq135Val < 515)
+      //mq135Val = random (30, 50);
+    //else
+      //mq135Val = random (75, 100);
 
-    if (mq7Val < 930)
-      mq7Val = random (10, 20);
-    else if (mq7Val < 970)
-      mq7Val = random (30, 50);
-    else
-      mq7Val = random (75, 100);
+    //if (mq7Val < 930)
+      //mq7Val = random (10, 20);
+    //else if (mq7Val < 970)
+      //mq7Val = random (30, 50);
+    //else
+      //mq7Val = random (75, 100);
 
-    if (dustDensity < 155)
-      dustDensity = random (10, 20);
-    else if (dustDensity < 625)
-      dustDensity = random (30, 50);
-    else
-      dustDensity = random (75, 100);
+    //if (dustDensity < 155)
+      //dustDensity = random (10, 20);
+    //else if (dustDensity < 625)
+      //dustDensity = random (30, 50);
+    //else
+      //dustDensity = random (75, 100);
     
 
     conf.sendFirebaseData(
